@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.brandixi3.i3labs.nlp</groupId>
+	<artifactId>nlp-parent</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+	<name>Brandix_i3-i3Labs-NLP</name>
+	<description>Master POM</description>
+	<modules>
+		<module>nlp-common</module>
+		<module>nlp-extraction</module>
+		<!--module>nlp-rules</module -->
+		<module>nlp-rules</module>
+	</modules>
+
+
+ <build>
+ 
+ 
+    <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.7</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <!-- here the phase you need -->
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/deployable</outputDirectory>
+              <resources>          
+                <resource>
+                  <directory>${basedir}/nlp-extraction/target</directory>
+				  <include>nlp-service.war</include>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>              
+            </configuration>            
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<execution-results>
+	<result identifier="message">
+		<com.brandixi3.i3labs.nlp.model.rule.RuleEvent>
+			<demographics>
+				<firstName>Dushman</firstName>
+			</demographics>
+			<medication />
+			<rank>
+				<value>10</value>
+			</rank>
+		</com.brandixi3.i3labs.nlp.model.rule.RuleEvent>
+	</result>
+	<fact-handle identifier="message"
+		external-form="0:1:560956599:560956599:1:DEFAULT:NON_TRAIT" />
+</execution-results>

@@ -1,0 +1,15 @@
+package com.brandixi3.i3labs.nlp.model.rule;
+
+import com.brandixi3.i3labs.nlp.model.rule.RuleEvent;
+import com.brandixi3.i3labs.nlp.model.Key;
+
+
+rule "Test"
+
+when
+    $re : RuleEvent()
+then
+	
+	insert(new Key());
+	System.out.println("Ammoooooooooooooooooo!!");
+end
