@@ -10,4 +10,10 @@ https://whitereflections.wordpress.com/2015/11/29/insight-on-unstructured-clinic
 mvn clean install
 
 ##Deploy
-Deploy docker file located in /deployable/Dockerfile
+
+###Deploy on docker.
+1. Copy two war files located in /nlp-extraction/target and /nlp-rules/target in to /deployable directory
+2. Deploy docker file located in /deployable/Dockerfile
+
+###Deploy on tomcat.
+Deploy two war files located in /nlp-extraction/target and /nlp-rules/target
